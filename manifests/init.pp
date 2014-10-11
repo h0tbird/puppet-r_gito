@@ -11,5 +11,4 @@ class r_gito (
 
   Class['::gitolite'] ->
   Class['::cgit'] ->
-  Class['::apache']
 }
