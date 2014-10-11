@@ -1,6 +1,9 @@
 class r_gito::apache inherits r_gito {
 
   if $apache {
-    class { '::apache': }
+    class { '::apache':
+      default_mods        => $apache['default_mods'],
+      default_confd_files => $apache['default_confd_files'],
+    }
   }
 }
