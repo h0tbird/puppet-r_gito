@@ -2,6 +2,7 @@ class r_gito (
 
   $gitolite = undef,
   $cgit     = undef,
+  $apache   = undef,
 
 ) {
 
@@ -10,5 +11,6 @@ class r_gito (
   contain "${module_name}::apache"
 
   Class['::gitolite'] ->
-  Class['::cgit']
+  Class['::cgit'] ->
+  Class['::apache']
 }
