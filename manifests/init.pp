@@ -7,4 +7,7 @@ class r_gito (
 
   contain "${module_name}::gitolite"
   contain "${module_name}::cgit"
+
+  Class['::gitolite'] ->
+  Class['::cgit']
 }
