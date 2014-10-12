@@ -11,6 +11,6 @@ class r_gito (
   contain "${module_name}::apache"
 
   Class['::gitolite'] ->
-  Class['::apache'] ->
-  Class['::cgit']
+  Class['::cgit'] ->
+  Class['::apache']
 }
